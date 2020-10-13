@@ -4,7 +4,7 @@ namespace Guenka\Bank\Model;
 
 use Guenka\Bank\Model\CPF;
 
-class Person
+abstract class Person
 {
   protected string $name;
   private CPF $cpf;
