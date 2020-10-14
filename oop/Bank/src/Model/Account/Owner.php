@@ -5,8 +5,9 @@ namespace Guenka\Bank\Model\Account;
 use Guenka\Bank\Model\Person;
 use Guenka\Bank\Model\CPF; 
 use Guenka\Bank\Model\Address;
+use Guenka\Bank\Model\Authenticated;
 
-class Owner extends Person
+class Owner extends Person implements Authenticated
 {
   private Address $address;
 
@@ -14,6 +15,11 @@ class Owner extends Person
   {
     parent::__construct($name, $cpf);
     $this->address = $address;
+  }
+
+  public function canAuthenticate(string $password): bool
+  {
+    return $password === '456';
   }
 
 }

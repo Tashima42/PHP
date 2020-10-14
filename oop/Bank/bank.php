@@ -30,3 +30,6 @@ $mateoAccount->transferMoney(300, $jorgeAccount);
 echo $jorgeAccount->getBalance() . PHP_EOL;
 echo $mateoAccount->getBalance() . PHP_EOL;
 echo PoupancaAccount::getNumberOfAccounts() . PHP_EOL;
+
+$myHouse = new Address('Parca Street', 'New York', 'New York', 'United States');
+echo $myHouse. PHP_EOL;

@@ -2,7 +2,7 @@
 
 namespace Guenka\Bank\Model;
 
-class CPF 
+final class CPF 
 {
   private string $cpf;
 

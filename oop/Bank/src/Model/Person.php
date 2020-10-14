@@ -15,7 +15,7 @@ abstract class Person
     $this->cpf = $cpf;
   }
 
-  protected function validateName(string $name)
+  final protected function validateName(string $name)
   {
     if (strlen($name) < 5) {
       echo "Name has less than 5 characters";

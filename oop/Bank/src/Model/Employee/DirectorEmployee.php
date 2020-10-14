@@ -2,9 +2,10 @@
 
 namespace Guenka\Bank\Model\Employee;
 
+use Guenka\Bank\Model\Authenticated;
 use Guenka\Bank\Model\Employee\Employee;
 
-class DirectorEmployee extends Employee
+class DirectorEmployee extends Employee implements Authenticated
 {
   protected function getBenefitsAmount(): float
   {
@@ -13,10 +14,6 @@ class DirectorEmployee extends Employee
 
   public function canAuthenticate(string $password): bool
   {
-    $controlPassword = '123456';
-    if($password != $controlPassword){
-      return false;
-    }
-    return true;
+    return $password === '123';
   }
 }
