@@ -36,4 +36,15 @@ class Student
             ->diff(new \DateTimeImmutable())
             ->y;
     }
+
+    public function  defineId(int $id): int
+    {
+        $this->id = $id;
+        return $this->id;
+    }
+    public function changeName(string $name): string
+    {
+        $this->name = $name;
+        return $this->name;
+    }
 }
